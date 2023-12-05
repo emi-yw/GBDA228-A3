@@ -6,6 +6,10 @@
   </head>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     @font-face {
       font-family: TongTong;
       src: url("TongTongFont-Regular.ttf");
@@ -32,15 +36,10 @@
       font-size: 24px;
       color: white;
     }
-    
+
     p {
       font-family: TongTong;
       font-size: 24px
-    }
-
-    #myDiv {
-      font-family: TongTong;
-      font-size: 24px;
     }
 
     a {
@@ -72,10 +71,14 @@
 
     #header {
       text-align: center;
-      padding-top: 200px;
+      padding-top: 150px;
       margin-right: 50px;
       margin-left: 50px;
       margin-bottom: 250px;
+    }
+
+    #nav {
+      padding-top: 16px;
     }
 
     #about {
@@ -83,13 +86,13 @@
       margin-right: 50px;
       margin-left: 50px;
     }
-    
-    #characters { 
+
+    #characters {
       margin-bottom: 100px;
       margin-right: 50px;
       margin-left: 50px;
     }
-    
+
     #contact {
       margin-bottom: 100px;
       margin-right: 50px;
@@ -100,10 +103,53 @@
       text-align: center;
     }
 
-    .character {
+    .character-description {
       padding-top: 20px;
       font-family: TongTong;
       font-size: 24px;
+    }
+
+    .label {
+      font-family: TongTong;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    
+    .input-button {
+      font-family: TongTong;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      width: 70px;
+      height: 30px;
+      color: black;
+      background-color: white;
+    }
+    
+    .input-button:hover{
+      background-color: #c94948;
+    }
+    
+    .input-field {
+      padding: 5px;
+      margin-top: 5px;
+      margin-bottom: 16px;
+      border: none;
+      background-color: transparent; 
+      border-bottom: 2px solid;
+    }
+    
+    textarea {
+      border: none;
+      border-bottom: 2px solid;
+      background: transparent;
+      width: 100%;
+      height: 100px;
+      resize: none;
+    }
+    
+    input:focus, textarea:focus {
+      outline: none;
     }
   </style>
 
@@ -165,7 +211,7 @@
                   let x = document.getElementById("RatTxt");
                   let y = document.getElementById("RatImg");
                   if (x.innerHTML === "Rat 鼠") {
-                    x.innerHTML = "Years: 1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020 Traits: like to be around people, treat their friends like they are family, hard-working, perfectionist, organized, social, expressive and talkative";
+                    x.innerHTML = "Years: 1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020 <br> Traits: like to be around people, treat their friends like they are family, hard-working, perfectionist, organized, social, expressive and talkative";
                     y.src = "rat hover.png";
                   } else {
                     x.innerHTML = "Rat 鼠";
@@ -177,7 +223,7 @@
             </div>
           </th>
           <th>
-            <div id="RatTxt" class="character description">
+            <div id="RatTxt" class="character-description">
               <p>Rat 鼠</p>
             </div>
           </th>
@@ -200,7 +246,7 @@
                   let x = document.getElementById("OxTxt");
                   let y = document.getElementById("OxImg");
                   if (x.innerHTML === "Ox 牛") {
-                    x.innerHTML = "Years: 1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021 Traits: work for a very long time compared to other people, not talkative, reliable, supportive, independent, and hardworking ";
+                    x.innerHTML = "Years: 1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021 <br> Traits: work for a very long time compared to other people, not talkative, reliable, supportive, independent, and hardworking ";
                     y.src = "ox hover.png";
                   } else {
                     x.innerHTML = "Ox 牛";
@@ -212,7 +258,7 @@
             </div>
           </th>
           <th>
-            <div id="OxTxt" class="character description">
+            <div id="OxTxt" class="character-description">
               <p>Ox 牛</p>
             </div>
           </th>
@@ -236,7 +282,7 @@
                   let x = document.getElementById("TigerTxt");
                   let y = document.getElementById("TigerImg");
                   if (x.innerHTML === "Tiger 虎") {
-                    x.innerHTML = "Years: 1914, 1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022, 2034 Traits: tempestuous yet calm, warm-hearted yet fearsome, courageous in the face of danger yet yielding and soft in mysterious, unexpected places";
+                    x.innerHTML = "Years: 1914, 1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022, 2034 <br> Traits: tempestuous yet calm, warm-hearted yet fearsome, courageous in the face of danger yet yielding and soft in mysterious, unexpected places";
                     y.src = "tiger hover.png";
                   } else {
                     x.innerHTML = "Tiger 虎";
@@ -248,7 +294,7 @@
             </div>
           </th>
           <th>
-            <div id="TigerTxt" class="character description">
+            <div id="TigerTxt" class="character-description">
               <p>Tiger 虎</p>
             </div>
           </th>
@@ -272,7 +318,7 @@
                   let x = document.getElementById("RabbitTxt");
                   let y = document.getElementById("RabbitImg");
                   if (x.innerHTML === "Rabbit 兔") {
-                    x.innerHTML = "Years: 1915, 1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023 Traits: avoid fighting and arguing at all times, pay close attention to small details, make sure everything is done correctly, artistic, calm, and peaceful";
+                    x.innerHTML = "Years: 1915, 1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023 <br> Traits: avoid fighting and arguing at all times, pay close attention to small details, make sure everything is done correctly, artistic, calm, and peaceful";
                     y.src = "rabbit hover.png";
                   } else {
                     x.innerHTML = "Rabbit 兔";
@@ -284,7 +330,7 @@
             </div>
           </th>
           <th>
-            <div id="RabbitTxt" class="character description">
+            <div id="RabbitTxt" class="character-description">
               <p>Rabbit 兔</p>
             </div>
           </th>
@@ -308,7 +354,7 @@
                   let x = document.getElementById("DragonTxt");
                   let y = document.getElementById("DragonImg");
                   if (x.innerHTML === "Dragon 龙") {
-                    x.innerHTML = "Years: 1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012, or 2024 Traits: high standards, charismatic, intelligent, confident, powerful and they are naturally lucky and gifted";
+                    x.innerHTML = "Years: 1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012, 2024 <br> Traits: high standards, charismatic, intelligent, confident, powerful and they are naturally lucky and gifted";
                     y.src = "dragon hover.png";
                   } else {
                     x.innerHTML = "Dragon 龙";
@@ -320,7 +366,7 @@
             </div>
           </th>
           <th>
-            <div id="DragonTxt" class="character description">
+            <div id="DragonTxt" class="character-description">
               <p>Dragon 龙</p>
             </div>
           </th>
@@ -344,7 +390,7 @@
                   let x = document.getElementById("SnakeTxt");
                   let y = document.getElementById("SnakeImg");
                   if (x.innerHTML === "Snake 蛇") {
-                    x.innerHTML = "Years: 1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, or 2027 Traits: nonchalant, but they are actually enthusiastic, romantic, decent, sophisticated, humorous, and eloquent";
+                    x.innerHTML = "Years: 1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, 2027 <br> Traits: nonchalant, but they are actually enthusiastic, romantic, decent, sophisticated, humorous, and eloquent";
                     y.src = "snake hover.png";
                   } else {
                     x.innerHTML = "Snake 蛇";
@@ -356,7 +402,7 @@
             </div>
           </th>
           <th>
-            <div id="SnakeTxt" class="character description">
+            <div id="SnakeTxt" class="character-description">
               <p>Snake 蛇</p>
             </div>
           </th>
@@ -380,7 +426,7 @@
                   let x = document.getElementById("HorseTxt");
                   let y = document.getElementById("HorseImg");
                   if (x.innerHTML === "Horse 马") {
-                    x.innerHTML = "Years: 	1930, 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026 Traits: like to be the center of attention, cheerful, enthusiasm, high-spirited, active and energetic";
+                    x.innerHTML = "Years: 	1930, 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026 <br> Traits: like to be the center of attention, cheerful, enthusiasm, high-spirited, active and energetic";
                     y.src = "horse hover.png";
                   } else {
                     x.innerHTML = "Horse 马";
@@ -392,7 +438,7 @@
             </div>
           </th>
           <th>
-            <div id="HorseTxt" class="character description">
+            <div id="HorseTxt" class="character-description">
               <p>Horse 马</p>
             </div>
           </th>
@@ -416,7 +462,7 @@
                   let x = document.getElementById("SheepTxt");
                   let y = document.getElementById("SheepImg");
                   if (x.innerHTML === "Sheep 羊") {
-                    x.innerHTML = "Years: 1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, or 2027 Traits: shy, reserved, soft, creative, and artistic";
+                    x.innerHTML = "Years: 1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, 2027 <br> Traits: shy, reserved, soft, creative, and artistic";
                     y.src = "sheep hover.png";
                   } else {
                     x.innerHTML = "Sheep 羊";
@@ -428,7 +474,7 @@
             </div>
           </th>
           <th>
-            <div id="SheepTxt" class="character description">
+            <div id="SheepTxt" class="character-description">
               <p>Sheep 羊</p>
             </div>
           </th>
@@ -452,7 +498,7 @@
                   let x = document.getElementById("MonkeyTxt");
                   let y = document.getElementById("MonkeyImg");
                   if (x.innerHTML === "Monkey 猴") {
-                    x.innerHTML = "Years: 1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016, and 2028 Traits: masters of practical jokes, sharp, smart, mischievousness, curiosity, and cleverness";
+                    x.innerHTML = "Years: 1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016, 2028 <br> Traits: masters of practical jokes, sharp, smart, mischievousness, curiosity, and cleverness";
                     y.src = "monkey hover.png";
                   } else {
                     x.innerHTML = "Monkey 猴";
@@ -464,7 +510,7 @@
             </div>
           </th>
           <th>
-            <div id="MonkeyTxt" class="character description">
+            <div id="MonkeyTxt" class="character-description">
               <p>Monkey 猴</p>
             </div>
           </th>
@@ -488,7 +534,7 @@
                   let x = document.getElementById("RoosterTxt");
                   let y = document.getElementById("RoosterImg");
                   if (x.innerHTML === "Rooster 鸡") {
-                    x.innerHTML = "Years: 1945, 1957, 1969, 1981, 1993, 2005, 2017, and 2029 Traits: pay very close attention to their appearances and actions, great performers, hard-working, leaders, dependable, ggressive and picky";
+                    x.innerHTML = "Years: 1945, 1957, 1969, 1981, 1993, 2005, 2017, 2029 <br> Traits: pay very close attention to their appearances and actions, great performers, hard-working, leaders, dependable, ggressive and picky";
                     y.src = "rooster hover.png";
                   } else {
                     x.innerHTML = "Rooster 鸡";
@@ -500,7 +546,7 @@
             </div>
           </th>
           <th>
-            <div id="RoosterTxt" class="character description">
+            <div id="RoosterTxt" class="character-description">
               <p>Rooster 鸡</p>
             </div>
           </th>
@@ -524,7 +570,7 @@
                   let x = document.getElementById("DogTxt");
                   let y = document.getElementById("DogImg");
                   if (x.innerHTML === "Dog 狗") {
-                    x.innerHTML = "Years: 1922, 1934, 1946, 1958, 1970, 1982, 1994, 206, 2018, 2030 Traits: honest, amiable, kind, cautious, prudent, loyal, reliable, considerate, understanding, patient, hard-working, and sincere.";
+                    x.innerHTML = "Years: 1922, 1934, 1946, 1958, 1970, 1982, 1994, 206, 2018, 2030 <br> Traits: honest, amiable, kind, cautious, prudent, loyal, reliable, considerate, understanding, patient, hard-working, and sincere.";
                     y.src = "dog hover.png";
                   } else {
                     x.innerHTML = "Dog 狗";
@@ -536,7 +582,7 @@
             </div>
           </th>
           <th>
-            <div class="character description" id="DogTxt">
+            <div class="character-description" id="DogTxt">
               <p>Dog 狗</p>
             </div>
           </th>
@@ -560,7 +606,7 @@
                   let x = document.getElementById("PigTxt");
                   let y = document.getElementById("PigImg");
                   if (x.innerHTML === "Pig 猪") {
-                    x.innerHTML = "Years: 1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031 Traits: generous, diligent, compassionate, energetic, enthusiastic, love to have fun, great sense of responsibility and handle conflict calmly.";
+                    x.innerHTML = "Years: 1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031 <br> Traits: generous, diligent, compassionate, energetic, enthusiastic, love to have fun, great sense of responsibility and handle conflict calmly.";
                     y.src = "pig hover.png";
                   } else {
                     x.innerHTML = "Pig 猪";
@@ -572,7 +618,7 @@
             </div>
           </th>
           <th>
-            <div class="character description" id="PigTxt">
+            <div class="character-description" id="PigTxt">
               <p>Pig 猪</p>
             </div>
           </th>
@@ -587,8 +633,17 @@
       <h2>Contacts</h2>
       <p> Do you have any stories you want TongTong to illustrate? Custom designs or illustrations? Any questions? Fill in the form below to get in contact with TongTong!</p>
 
-      
-      
+      <form action="mailto:e52wu@uwaterloo.ca" method="post" enctype="text/plain"><br>
+        <label class="label">Name:</label><br>
+        <input type="text" class="input-field" name="name"><br>
+        <label class="label">E-mail:</label><br>
+        <input type="text" class="input-field" name="mail"><br>
+        <label class="label">Message:</label><br>
+        <textarea name="message" size="50"></textarea><br><br>
+        <input class="input-button" type="submit" value="Send">
+      </form>
+
+
     </section>
 
   </body>
