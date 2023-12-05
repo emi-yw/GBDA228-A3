@@ -23,13 +23,19 @@
     h2 {
       font-family: TongTong;
       font-size: 42px;
+      color: white;
     }
 
     h5 {
       margin-top: -50px;
       font-family: TongTong;
-      font-size: 16px;
+      font-size: 24px;
       color: white;
+    }
+    
+    p {
+      font-family: TongTong;
+      font-size: 24px
     }
 
     #myDiv {
@@ -74,6 +80,20 @@
 
     #about {
       margin-bottom: 100px;
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+    
+    #characters { 
+      margin-bottom: 100px;
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+    
+    #contact {
+      margin-bottom: 100px;
+      margin-right: 50px;
+      margin-left: 50px;
     }
 
     .p-center-align {
@@ -89,14 +109,14 @@
 
   <body>
 
-    <section id="home">
+    <section id="home page" name="home">
       <section id="nav bar">
         <div id="nav">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#characters">Characters</a></li>
-            <li><a href="/contact/">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </section>
@@ -122,7 +142,8 @@
       </div>
     </section>
 
-    <section id="characters">
+    <section id="character introduction">
+      <a name="characters"></a>
       <h2>Meet the Zodiacs!</h2>
       <p> Double click the zodiacs to learn more about them!</p>
 
@@ -133,7 +154,7 @@
             <div class="image">
               <img id="RatImg" src="rat og.png" onclick="changeRat()" alt="rat icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -168,7 +189,7 @@
             <div class="image">
               <img id="OxImg" src="ox og.png" onclick="changeOx()" alt="ox icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -204,7 +225,7 @@
             <div class="image">
               <img id="TigerImg" src="tiger og.png" onclick="changeTiger()" alt="tiger icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -240,7 +261,7 @@
             <div class="image">
               <img id="RabbitImg" src="rabbit og.png" onclick="changeRabbit()" alt="rabbit icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -276,7 +297,7 @@
             <div class="image">
               <img id="DragonImg" src="dragon og.png" onclick="changeDragon()" alt="dragon icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -312,7 +333,7 @@
             <div class="image">
               <img id="SnakeImg" src="snake og.png" onclick="changeSnake()" alt="snake icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: hhttps://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -348,7 +369,7 @@
             <div class="image">
               <img id="HorseImg" src="horse og.png" onclick="changeHorse()" alt="horse icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -384,7 +405,7 @@
             <div class="image">
               <img id="SheepImg" src="sheep og.png" onclick="changeSheep()" alt="sheep icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -420,7 +441,7 @@
             <div class="image">
               <img id="MonkeyImg" src="monkey og.png" onclick="changeMonkey()" alt="monkey icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -455,8 +476,8 @@
           <th>
             <div class="image">
               <img id="RoosterImg" src="rooster og.png" onclick="changeRooster()" alt="rooster icon" width="100px" height="100px">
-             <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              <!--
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -480,7 +501,7 @@
             </div>
           </th>
           <th>
-            <div id= "RoosterTxt" class="character description">
+            <div id="RoosterTxt" class="character description">
               <p>Rooster 鸡</p>
             </div>
           </th>
@@ -492,7 +513,7 @@
             <div class="image">
               <img id="DogImg" src="dog og.png" onclick="changeDog()" alt="dog icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -528,7 +549,7 @@
             <div class="image">
               <img id="PigImg" src="pig og.png" onclick="changeText()" alt="pig icon" width="100px" height="100px">
               <!--
-              Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp
+              Code copied from: https://www.w3schools.com/howto/howto_js_toggle_text.asp
               Author: w3schools.com
               Name: How TO - Toggle/Swap Text
               Description: Swaps text and image when click on image 
@@ -564,7 +585,11 @@
     </section>
 
     <section id="contact">
+      <h2>Contacts</h2>
+      <p> Do you have any stories you want TongTong to illustrate? Custom designs or illustrations? Any questions? Fill in the form below to get in contact with TongTong!</p>
 
+      
+      
     </section>
 
   </body>
